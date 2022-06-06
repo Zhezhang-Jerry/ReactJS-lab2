@@ -1,8 +1,6 @@
-import albums from "./data";
-
-const AlbumInfo = () => {
+const AlbumInfo = (props) => {
     const divStyle = {padding: '10px', display: 'flex', color: 'white'};
-    const songList = albums[0].tracks.map( song => {
+    const songList = props.tracks.map( song => {
         return (
             <div style={divStyle}>
                 <li style={{width: '60px'}}>{song}</li> 
@@ -12,7 +10,7 @@ const AlbumInfo = () => {
     })
     return (
         <div style={divStyle}>
-            <img src={albums[0].coverImg} alt={albums[0].name}></img>
+            <img src={props.coverImg} alt={props.name}></img>
             <ol>
             {songList}
             </ol>

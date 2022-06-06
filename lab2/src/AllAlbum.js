@@ -1,5 +1,4 @@
 const AllAlbum = (props) => {
-    console.log(props)
     const albumImageStyle = {borderRadius: '80px', maxWidth: '5%'};
     return (
         <div style={{color: 'white'}}>
