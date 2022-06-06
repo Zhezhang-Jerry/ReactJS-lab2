@@ -1,13 +1,19 @@
 import './App.css';
-// import albums from './data';
+import albums from './data';
 import AlbumInfo from './AlbumInfo';
 import AllAlbum from './AllAlbum';
 
 const App = () => {
   return (
-    <div>
+    <div style={{color: "white"}}>
       <AlbumInfo />
-      <AllAlbum />
+      <h1 style={{textAlign: 'center', fontSize: '120%', padding: '30px'}}>Select an Album</h1>
+      {
+        albums.map( (album) => {
+          return <AllAlbum coverImg={album.coverImg} name={album.name} />
+        })
+      }
+      {/* <AllAlbum /> */}
     </div>
   )
 };
