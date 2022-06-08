@@ -16,6 +16,6 @@ const AlbumInfo = (props) => {
             </ol>
         </div>
     )
-};
-
-export default AlbumInfo;
+  };
+  
+  export default AlbumInfo;
